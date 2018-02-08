@@ -41,7 +41,7 @@ def main():
 		# notify-send command
 		warning = "\"Warning! High Temperature\""
 		message = "\"App Name:   {} \n Pid:   {} \nTry:  sudo kill {} \"".format(str_appname,str_apppid,str_apppid)
-		notify = "notify-send "+warning+" "+message+""
+		notify = "notify-send "+warning+" "+message+" -i hint"
 
 		for i in range (0,out_len):
 			if output[i] > HIGH:
