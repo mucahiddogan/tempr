@@ -47,7 +47,7 @@ def main():
 			if output[i] > HIGH:
 				os.system(notify)
 				break
-		time.sleep(8)
+		time.sleep(6)
 
 if __name__ == '__main__':
 	main()
