@@ -5,7 +5,7 @@ import subprocess
 import time
 import re
 
-# High level temperature is 55°C, you can change manually *_*
+# High level temperature is 55°C, you can change manually.
 HIGH = 55
 print("App is running...")
 
@@ -27,7 +27,7 @@ def main():
 
 		ps_pid = subprocess.Popen(app_pid,shell=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
 		apppid = ps_pid.communicate()[0].decode().splitlines()
-		#print(output, appname, apppid)
+		
 
 		# str to int. degrees
 		for i in range(0,out_len):
@@ -36,7 +36,6 @@ def main():
 		# list to str. app information
 		str_appname = ''.join(appname)
 		str_apppid = ''.join(apppid)
-		#print(str_appname,str_apppid)
 
 		# notify-send command
 		warning = "\"Warning! High Temperature\""
@@ -51,4 +50,3 @@ def main():
 
 if __name__ == '__main__':
 	main()
-# Some of the codes from github.com/0x7000/ph
